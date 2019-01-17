@@ -48,7 +48,11 @@ public class ActionCat extends Cat {
         }
     }
 
- /*       Cat cat1 = new Cat();
+
+
+ /*     Якщо цикл ащ закоментувати, а це розкоментувати - то код працює
+
+        Cat cat1 = new Cat();
         cat1.name = "Фунтік";
         cat1.weight = (float) 5.8;
 
