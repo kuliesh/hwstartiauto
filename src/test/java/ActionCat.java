@@ -1,4 +1,3 @@
-import java.util.Scanner;
 class Cat {
     //змінні
     String name;
@@ -10,8 +9,6 @@ class Cat {
     //Визначаємо метод meow
     /*Якщо котик скаже "Мяу" - то виводиться повідомлення Meow*/
     void meow(){
-
-        String speak;
 
         System.out.println("Котик звуть "+ name +" і він нявкнув 'Meow'");
     }
@@ -30,26 +27,26 @@ class Cat {
     }
 }
 
-public class ActionCat {
+public class ActionCat extends Cat {
     public static void main(String[] args) {
 
         //об'являємо масив імен котів
         String name []= {"Фунтік", "Шпунтік", "Барсік", "Том", "Ям"};
         //об'являємо масив ваги котів
         float weight [] = {(float) 5.8, (float) 5.7, (float) 4.4, (float) 5.501, (float) 5.49,};
-        //об'являємо масив котів
-        String catIndex [] = {"cat1", "cat2", "cat3", "cat4", "cat5"};
 
+        ActionCat[] cat = new ActionCat[5];
         for (int i=1; i==5; i++){
 
-            Cat catIndex[i] = new Cat();
+            cat[i] = new ActionCat();
 
-            catIndex[i].name = name[i];
-            catIndex[i].weight = weight[i];
+            cat[i].name = name[i];
+            cat[i].weight = weight[i];
 
-            catIndex[i].meow();
-            catIndex[i].eat();
+            cat[i].meow();
+            cat[i].eat();
         }
+    }
 
  /*       Cat cat1 = new Cat();
         cat1.name = "Фунтік";
@@ -82,4 +79,3 @@ public class ActionCat {
         cat5.meow();
         cat5.eat(); */
     }
-}
